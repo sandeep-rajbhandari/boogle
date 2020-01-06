@@ -82,8 +82,9 @@ export class HomePage extends React.Component<IProps, IState> {
         const interval = setInterval(() => {
                 const totalSeconds = (+endDate - (+new Date())) / 1000;
                 if (totalSeconds > 0) {
-                    this.setState({time: `${Math.floor(totalSeconds / 60)}:${Math.floor(totalSeconds % 60)}`});
+                    this.setState({time: `${Math.floor(totalSeconds / 60)}:${Math.ceil(totalSeconds % 60)}`});
                 } else {
+                    this.setState({time: '0:0'});
                     clearInterval(interval);
                     if (window.confirm("Game Over!! Do you want to play again?")) {
                         this.reset();
@@ -95,9 +96,9 @@ export class HomePage extends React.Component<IProps, IState> {
         )
     }
 
-    reset(){
+    reset() {
         this.props.reset();
-        this.setState({characters:HomePageUtil.generateCharacters()});
+        this.setState({characters: HomePageUtil.generateCharacters()});
         this.startTimer();
     }
 
@@ -126,5 +127,5 @@ export class HomePage extends React.Component<IProps, IState> {
 
 export default connect(
     mapStateToProps,
-    {fetchWords, addWords,fetchPending,reset}
+    {fetchWords, addWords, fetchPending, reset}
 )(HomePage);

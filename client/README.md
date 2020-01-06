@@ -1,4 +1,4 @@
-##Boogle React App
+## Boogle React App
 This repo showcases Boogle Application using React/Redux.For testing Jest and Enzyme has been used.
 
 ## Setup
