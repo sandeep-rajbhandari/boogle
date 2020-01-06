@@ -1,11 +1,12 @@
 import {shallow, ShallowWrapper} from "enzyme";
-import {HomePage, IProps} from "../homePage";
+import {HomePage} from "../homePage";
 import * as React from "react";
 import {SquareModel} from "../../../model/square.model";
 
 describe('Board component tests', () => {
     let homePageWrapper: ShallowWrapper;
     let props: any;
+    window.confirm = jest.fn();
 
     beforeEach(() => {
             props = {
@@ -13,7 +14,8 @@ describe('Board component tests', () => {
                 pending: true,
                 error: {},
                 fetchWords: jest.fn(),
-                addWords: jest.fn()
+                addWords: jest.fn(),
+                fetchPending:jest.fn()
             }
 
             homePageWrapper = shallow(<HomePage {...props}/>);
@@ -61,5 +63,6 @@ describe('Board component tests', () => {
             }
         );
         expect(props.addWords.mock.calls.length).toBe(1)
+
     })
 });

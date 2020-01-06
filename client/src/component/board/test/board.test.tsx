@@ -14,7 +14,7 @@ describe('Board component tests', () => {
     it('should have 4X4 metrics board ', function () {
         expect(boardComponent.find('td')).toHaveLength(16);
         expect(boardComponent.find('tr')).toHaveLength(4);
-        boardComponent.find('input').getElements()[0].props.value
+        expect(boardComponent.find('input').getElements()[0].props.value).toMatch(new RegExp('[A-Z]'));
     });
     it('should have letters according to input ', function () {
         boardComponent.find('input').getElements().forEach((val: any, index: number) => {

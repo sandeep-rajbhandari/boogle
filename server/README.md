@@ -3,5 +3,5 @@ This project provides the endpoint for validating the word entered by user and a
 The word is validated using a text file containing words.
 ###`rails server`
 Runs application
-###`rails rspec`
+###`bundle exec rspec`
 Runs tests
