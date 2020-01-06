@@ -21,7 +21,7 @@ li.ok {
 li.wrong {
     background-image: url(assets/images/icons8-cancel.svg);
     margin: 0;
-    padding: 36px 0 36px 84px;
+    padding: 10px 0 10px 84px;
     list-style: none;
     background-repeat: no-repeat;
     background-position: left center;
