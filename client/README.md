@@ -3,9 +3,9 @@ This repo showcases Boogle Application using React/Redux.For testing Jest and En
 
 ## Setup
 
-1. `git clone git@github.com:mxstbr/react-testing`
+1. `git clone https://github.com/sandeep-rajbhandari/boogle.git`
 
-2. `cd react-testing`
+2. `cd boogle/client`
 
 3. `npm install`
 
